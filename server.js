@@ -5,9 +5,17 @@ const usersRouter = require('./users/users-router.js');
 
 const server = express();
 
+// GLOBAL (custom) middleware
+function ensureUpperCaseName(req, res, next) {
+    const name = req.body.name;
+    name.toUpperCase();
+    next();
+}
+
 // middleware
 server.use(express.json()); // <== this is a built-in middleware
 server.use(helmet()); // <== this is a third party middleware, requires 'yarn add'
+server.use(ensureUpperCaseName);
 
 // routing
 server.use('/api/users', usersRouter);

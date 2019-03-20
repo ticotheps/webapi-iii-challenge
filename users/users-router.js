@@ -43,3 +43,17 @@ router.get('/:id', async (req, res) => {
         });
     }
 });
+
+// Adds a new user to the current list of 'users' in db.
+router.post('/', async (req, res) => {
+    try {
+        const user = await Users.add(req.body);
+        res.status(201).json(user);
+    } catch (error) {
+        // logs error to database
+        console.log(error);
+        res.status(500).json({
+            message: 'Error adding the user',
+        })
+    }
+});

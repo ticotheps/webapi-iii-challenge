@@ -17,3 +17,10 @@ router.get('/', async (req, res) => {
         });
     }
 });
+
+const error = {
+    title: 'Wrong Credentials',
+    description: 'The credentials are incorrect',
+    recoveryInstructions: 'Please verify your information and try again.',
+};
+

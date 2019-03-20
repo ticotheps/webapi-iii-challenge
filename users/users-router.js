@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
 const error = {
     title: 'Wrong Credentials',
     description: 'The credentials are incorrect',
-    recoveryInstructions: 'Please verify your information and try again.',
+    recoveryInstructions: 'Please verify your information and try again',
 };
 
 // Returns a single user, by id, from db.
@@ -55,5 +55,23 @@ router.post('/', async (req, res) => {
         res.status(500).json({
             message: 'Error adding the user',
         })
+    }
+});
+
+// Deletes a user from the current list of 'users' in db.
+router.delete('/:id', async (req, res) => {
+    try {
+        const count = await Users.remove(req.params.id);
+        if (count > 0) {
+            res.status(200).json({ message: 'The user has been deleted' });
+        } else {
+            res.status(404).json({ message: 'The user could not be found' });
+        }
+    } catch (error) {
+        // logs error to database
+        console.log(error);
+        res.status(500).json({
+            message: 'Error removing the user'
+        });
     }
 });

@@ -67,3 +67,9 @@ function findUserPosts(userId) {
         .select('p.id', 'p.text', 'u.id as userId', 'u.name as user')
         .where({ user_id: userId });
 }
+
+function findPostsById(id) {
+    return db('posts')
+        .where({ id })
+        .first();
+}

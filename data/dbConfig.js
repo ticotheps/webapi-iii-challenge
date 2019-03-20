@@ -57,9 +57,7 @@ function remove(id) {
 function update(id, changes) {
     return db('users')
         .where({ id })
-        .update(changes, '*'); // <-- What does this '*' refer to? I believe that it is referring to
-}                              // a selector that is telling the server to update all changes that have
-                               // been included in the req.body during the PUT request.
+        .update(changes, '*'); // returns the count of users that were successfully updated
 
 function findUserPosts(userId) {
     return db('posts as p')
@@ -75,7 +73,7 @@ function findPostsById(id) {
 }
 
 async function addPost(post) {
-    const [id] = await db('posts').insert(post); // <-- What is square brackets around 'id' mean?
+    const [id] = await db('posts').insert(post); // the square brackets destructures 'id' from the returned array
 
     return findPostsById(id);
 }

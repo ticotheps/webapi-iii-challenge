@@ -1,6 +1,7 @@
 const express = require('express');
 
-const Users = require('../data/dbConfig.js');
+const Users = require('../data/helpers/userDb.js');
+const Posts = require('../data/helpers/postDb.js');
 
 const router = express.Router();
 
@@ -8,7 +9,7 @@ const router = express.Router();
 // Returns list of users from db.
 router.get('/', async (req, res) => {
     try {
-        const users = await Users.find(req.query); 
+        const users = await Users.get(req.query); 
         res.status(200).json(users);
     } catch (error) {
         // logs error to database
@@ -28,7 +29,7 @@ const error = {
 // Returns a single user, by id, from db.
 router.get('/:id', async (req, res) => {
     try {
-        const user = await Users.findById(req.params.id);
+        const user = await Users.getById(req.params.id);
 
         if (user) {
             res.status(200).json(user);
@@ -47,7 +48,7 @@ router.get('/:id', async (req, res) => {
 // Adds a new user to the current list of 'users' in db.
 router.post('/', async (req, res) => {
     try {
-        const user = await Users.add(req.body);
+        const user = await Users.insert(req.body);
         res.status(201).json(user);
     } catch (error) {
         // logs error to database
@@ -97,7 +98,7 @@ router.put('/:id', async (req, res) => {
 // This is a sub-route or sub-resource that returns all the posts for a specific user that is found by their id
 router.get('/:id/posts', async (req, res) => {
     try {
-        const posts = await Users.findUserPosts(req.params.id);
+        const posts = await Users.getUserPosts(req.params.id);
 
         res.status(200).json(posts);
     } catch (error) {

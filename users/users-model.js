@@ -53,3 +53,10 @@ function remove(id) {
         .where({ id })
         .del();
 }
+
+function update(id, changes) {
+    return db('users')
+        .where({ id })
+        .update(changes, '*'); // <-- What does this '*' refer to? I believe that it is referring to
+}                              // a selector that is telling the server to update all changes that have
+                               // been included in the req.body during the PUT request.

@@ -109,4 +109,20 @@ router.get('/:id/posts', async (req, res) => {
     }
 });
 
+// Adds new posts to a user
+router.post('/:id/posts', async (req, res) => {
+    const postInfo = { ...req.body, user_id: req.params.id };
+
+    try {
+        const post = await Users.addPost(postInfo);
+        res.status(210).json(post);
+    } catch (error) {
+        // logs error to database
+        console.log(error);
+        res.status(500).json({
+            message: 'Error getting the posts for the user',
+        });
+    }
+});
+
 module.exports = router;

@@ -93,3 +93,18 @@ router.put('/:id', async (req, res) => {
         });
     }
 });
+
+// This is a sub-route or sub-resource that returns all the posts for a specific user that is found by their id
+router.get('/:id/posts', async (req, res) => {
+    try {
+        const posts = await Users.findUserPosts(req.params.id);
+
+        res.status(200).json(posts);
+    } catch (error) {
+        // logs error to database
+        console.log(error);
+        res.status(500).json({
+            message: 'Error getting the messages for the hub',
+        });
+    }
+});

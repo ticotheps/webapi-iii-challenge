@@ -109,7 +109,7 @@ router.get('/:id/posts', async (req, res) => {
     }
 });
 
-// Adds new posts to a user
+// Adds a new post to a user
 router.post('/:id/posts', async (req, res) => {
     const postInfo = { ...req.body, user_id: req.params.id };
 

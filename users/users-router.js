@@ -115,7 +115,7 @@ router.post('/:id/posts', async (req, res) => {
     const postInfo = { ...req.body, user_id: req.params.id };
 
     try {
-        const post = await Users.addPost(postInfo);
+        const post = await Posts.insert(postInfo);
         res.status(210).json(post);
     } catch (error) {
         // logs error to database

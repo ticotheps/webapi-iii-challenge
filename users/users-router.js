@@ -95,7 +95,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// This is a sub-route or sub-resource that returns all the posts for a specific user that is found by their id
+// This is a sub-route or sub-resource that returns all the posts for a specific user (that is found by their id)
 router.get('/:id/posts', async (req, res) => {
     try {
         const posts = await Users.getUserPosts(req.params.id);

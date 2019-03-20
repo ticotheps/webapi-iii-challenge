@@ -41,3 +41,9 @@ function findById(id) {
         .where({ id }) // <-- What does this id refer to? I don't believe that it is referring
         .first();      // to the 'id' parameter being passed in, but instead, I think that it
 }                      // refers to the possible matching 'id' of an existing object in 'users'.
+
+async function add(user) {
+    const [id] = await db('users').insert(user);
+
+    return findById(id);
+}

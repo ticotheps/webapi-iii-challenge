@@ -108,3 +108,5 @@ router.get('/:id/posts', async (req, res) => {
         });
     }
 });
+
+module.exports = router;

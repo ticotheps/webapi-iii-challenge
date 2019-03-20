@@ -43,8 +43,8 @@ function findById(id) {
 }                      // refers to the possible matching 'id' of an existing object in 'users'.
 
 async function add(user) {
-    const [id] = await db('users').insert(user);
-
+    const [id] = await db('users').insert(user); // <-- What is square brackets around 'id' mean?
+                                               
     return findById(id);
 }
 
@@ -72,4 +72,10 @@ function findPostsById(id) {
     return db('posts')
         .where({ id })
         .first();
+}
+
+async function addPost(post) {
+    const [id] = await db('posts').insert(post); // <-- What is square brackets around 'id' mean?
+
+    return findPostsById(id);
 }

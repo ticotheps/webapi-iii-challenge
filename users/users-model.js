@@ -60,3 +60,10 @@ function update(id, changes) {
         .update(changes, '*'); // <-- What does this '*' refer to? I believe that it is referring to
 }                              // a selector that is telling the server to update all changes that have
                                // been included in the req.body during the PUT request.
+
+function findUserPosts(userId) {
+    return db('posts as p')
+        .join('users as u', 'p.user_id', 'u.id')
+        .select('p.id', 'p.text', 'u.id as userId', 'u.name as user')
+        .where({ user_id: userId });
+}

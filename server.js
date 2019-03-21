@@ -7,8 +7,9 @@ const server = express();
 
 // GLOBAL (custom) middleware
 function ensureUpperCaseName(req, res, next) {
-    const name = req.body.name;
-    name.toUpperCase();
+    if ("name" in req.body) {
+        req.body.name = req.body.name.toUpperCase();
+    }
     next();
 }
 

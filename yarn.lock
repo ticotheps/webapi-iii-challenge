@@ -136,9 +136,9 @@ assign-symbols@^1.0.0:
   integrity sha1-WWZ/QfrdTyDMvCu5a41Pf3jsA2c=
 
 async-each@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
-  integrity sha1-GdOGodntxufByF04iu28xW0zYC0=
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.2.tgz#8b8a7ca2a658f927e9f307d6d1a42f4199f0f735"
+  integrity sha512-6xrbvN0MOBKSJDdonmSSz2OwFSgxRaVtBDes26mj9KIGtDo+g9xosFRSC+i1gQh2oAN/tQ62AI/pGZGQjVOiRg==
 
 asynckit@^0.4.0:
   version "0.4.0"
@@ -312,9 +312,9 @@ chalk@^2.0.1:
     supports-color "^5.3.0"
 
 chokidar@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.1.tgz#adc39ad55a2adf26548bd2afa048f611091f9184"
-  integrity sha512-gfw3p2oQV2wEt+8VuMlNsPjCxDxvvgnm/kz+uATu805mWVF8IJN7uz9DN7iBz+RMJISmiVbCOBFs9qBGMjtPfQ==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.2.tgz#9c23ea40b01638439e0513864d362aeacc5ad058"
+  integrity sha512-IwXUx0FXc5ibYmPC2XeEj5mpXoV66sR+t3jqu2NS2GYwCktt3KF1/Qqjws/NkegajBA4RbZ5+DDwlOiJsxDHEg==
   dependencies:
     anymatch "^2.0.0"
     async-each "^1.0.1"
@@ -596,6 +596,11 @@ dot-prop@^4.1.0:
   integrity sha512-tUMXrxlExSW6U2EXiiKGSBVdYgtV8qlHL+C10TsW4PURY/ic+eaysnSkwB4kA/mBlCyy/IKDJ+Lc3wbWeaXtuQ==
   dependencies:
     is-obj "^1.0.0"
+
+dotenv@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-7.0.0.tgz#a2be3cd52736673206e8a85fb5210eea29628e7c"
+  integrity sha512-M3NhsLbV1i6HuGzBUH8vXrtxOk+tWmzWKDMbAVSUp3Zsjm7ywFeuwrUXhmhQyRK1q5B5GGy7hcXPbj3bnfZg2g==
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -1684,9 +1689,9 @@ ms@^2.1.1:
   integrity sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
 
 nan@^2.9.2:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.12.1.tgz#7b1aa193e9aa86057e3c7bbd0ac448e770925552"
-  integrity sha512-JY7V6lRkStKcKTvHO5NVSQRv+RV+FIL5pvDoLiAtSL9pKlC5x9PKQcZDsq7m4FO4d57mkhC6Z+QhAh3Jdk5JFw==
+  version "2.13.1"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.13.1.tgz#a15bee3790bde247e8f38f1d446edcdaeb05f2dd"
+  integrity sha512-I6YB/YEuDeUZMmhscXKxGgZlFnhsn5y0hgOZBadkzfTRrZBtJDZeg6eQf7PYMIEclwmorTKK8GztsyOUSVBREA==
 
 nan@~2.10.0:
   version "2.10.0"
@@ -2149,9 +2154,9 @@ regex-not@^1.0.0, regex-not@^1.0.2:
     safe-regex "^1.1.0"
 
 registry-auth-token@^3.0.1:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/registry-auth-token/-/registry-auth-token-3.3.2.tgz#851fd49038eecb586911115af845260eec983f20"
-  integrity sha512-JL39c60XlzCVgNrO+qq68FoNb56w/m7JYvGR2jT5iR1xBrUA3Mfx5Twk5rqTThPmQKMWydGmq8oFtDlxfrmxnQ==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/registry-auth-token/-/registry-auth-token-3.4.0.tgz#d7446815433f5d5ed6431cd5dca21048f66b397e"
+  integrity sha512-4LM6Fw8eBQdwMYcES4yTnn2TqIasbXuwDx3um+QRs7S55aMKCBKBxvPXl2RiUjHwuJLTyYfxSpmfSAjQpcuP+A==
   dependencies:
     rc "^1.1.6"
     safe-buffer "^5.0.1"
@@ -2646,9 +2651,9 @@ unzip-response@^2.0.1:
   integrity sha1-0vD3N9FrBhXnKmk17QQhRXLVb5c=
 
 upath@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.0.tgz#35256597e46a581db4793d0ce47fa9aebfc9fabd"
-  integrity sha512-bzpH/oBhoS/QI/YtbkqCg6VEiPYjSZtrHQM6/QnJS6OL9pKUFLqb3aFh4Scvwm45+7iAgiMkLhSbaZxUqmrprw==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.2.tgz#3db658600edaeeccbe6db5e684d67ee8c2acd068"
+  integrity sha512-kXpym8nmDmlCBr7nKdIx8P2jNBa+pBpIUFRnKJ4dr8htyYGJFokkr2ZvERRtUN+9SY+JqXouNgUPtv6JQva/2Q==
 
 update-notifier@^2.5.0:
   version "2.5.0"

@@ -3,6 +3,8 @@ const helmet = require('helmet');
 
 const usersRouter = require('./users/users-router.js');
 
+const db = require('./data/dbConfig.js');
+
 const server = express();
 
 // GLOBAL (custom) middleware
